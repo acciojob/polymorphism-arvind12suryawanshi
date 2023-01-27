@@ -1,32 +1,35 @@
 package com.driver;
 
 public class Main {
+    public static void main(String[] args) {
 
+        Product p = new Product();
 
+        int ansValue = p.product(2,3);
 
-public  static class Product {
+        int secondAnswerValue=p.product(2,3,4);
 
-
-    public int Product(int x, int y) {
-        return x*y;
+        double thirdAnswerValue=p.product(2.1,2.9);
 
     }
-    public int Product(int x,int y,int z){
-        return x*y*z;
+    public static class Product{
+        public int product(int x, int y) {
+            int ans=x*y;
+            return ans;
+        }
+        public int product(int x, int y, int z) {
+
+            int secondAnswer=x*y*z;
+            return  secondAnswer;
         }
 
-        public double Product(double x,double y){
-        return x*y;
+        public double product(double x, double y) {
+            double thirdAnswer=x*y;
+            return thirdAnswer;
+
+
+
         }
-}
+    }
 
-public static void main(String [] args){
-    Product p = new Product();
-
-    p.Product(10,5);
-    p.Product(10,5,2);
-    p.Product(5.02,3.01);
-
-
-}
 }
